@@ -2,9 +2,9 @@
   <PageWrapper title="Informações do personagem">
     <router-link :to="{ name: 'Home'}">← Voltar</router-link>
 
-    <div class="flex rounded overflow-hidden py-3 flex-col md:flex-row " v-if="!loading">
-      <div class="w-full h-full md:h-96 md:w-96">
-        <img :src="character.image" :alt="character.name" class="object-contain w-full h-full rounded-lg">
+    <div class="flex rounded justify-center min-w-md md:min-w-2xl mx-auto overflow-hidden py-3 flex-col md:flex-row " v-if="!loading">
+      <div class="md:shrink-0">
+        <img class="h-96 w-full object-cover md:h-full md:w-96" :src="character.image" :alt="character.name">
       </div>
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2 text-sky-500">{{ character.name }}</div>

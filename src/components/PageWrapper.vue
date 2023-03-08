@@ -4,14 +4,14 @@
     <header v-if="$slots.header || title">
       <div class="px-4 sm:px-3">
         <slot name="header">
-          <h2 class="text-xl font-semibold leading-tight">{{ title }}</h2>
+          <h2 class="text-slate-900 dark:text-white text-xl font-semibold leading-tight">{{ title }}</h2>
         </slot>
       </div>
     </header>
 
     <!-- Page Content -->
     <main class="w-full" :class="{ 'mt-2': !$slots.header }">
-      <div class="px-4 sm:px-3">
+      <div class="px-4 sm:px-3 text-slate-900 dark:text-white">
         <slot />
       </div>
       <Footer />
