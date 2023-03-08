@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    DarkModeSwitch: typeof import('./src/components/DarkModeSwitch.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     PageWrapper: typeof import('./src/components/PageWrapper.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -1,4 +1,5 @@
 <template>
+  <DarkModeSwitch />
   <div class="py-5 text-sm text-slate-500 dark:text-slate-400 text-center">
   	<p><a href="https://thomasgroch.xyz/" target="_blank">Thomas Letsch Groch</a> - 2023</p>
     <span v-if="commit_ref" class="text-sm text-slate-500 dark:text-slate-400">

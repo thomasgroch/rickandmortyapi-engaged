@@ -2,7 +2,7 @@
   <PageWrapper title="Início">
     <div class="pl-5 pt-3 flex justify-center items-center text-slate-900 dark:text-white">
       <span class="px-3">Pesquisar por nome:</span>
-      <input type="text" v-model="searchQuery" placeholder="Rick" class="p-2 rounded-md w-64 text-white dark:text-slate-900" @input="currentPage = 1">
+      <input type="text" v-model="searchQuery" placeholder="Rick" class="p-2 rounded-md w-64 text-slate-900 bg-slate-500 dark:bg-white dark:text-slate-900 text-white" @input="currentPage = 1">
     </div>
 
     <div class="min-h-screen">
