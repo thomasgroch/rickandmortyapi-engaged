@@ -81,7 +81,7 @@ const goToNextPage = async () => {
   **/
   await nextTick()
   await nextTick()
-  if( 0 == characterCount.value ) {
+  if( ! loading && 0 == characterCount.value ) {
     currentPage.value--
   }
 }
