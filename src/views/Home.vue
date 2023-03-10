@@ -1,7 +1,7 @@
 <template>
   <PageWrapper title="Início">
-    <div class="pl-5 pt-3 flex justify-center items-center text-slate-900 dark:text-white">
-      <span class="px-3">Pesquisar por nome:</span>
+    <div class="py-3 flex flex-col md:flex-row justify-center items-center text-slate-900 dark:text-white">
+      <span class="pb-3 md:pb-0 md:px-3">Pesquisar por nome:</span>
       <input type="text" v-model="searchQuery" placeholder="Rick" class="p-2 rounded-md w-64 text-slate-900 bg-slate-500 dark:bg-white dark:text-slate-900 text-white" @input="currentPage = 1">
     </div>
 
@@ -14,14 +14,14 @@
         </svg>
       </p>
       <div v-else class="py-5">
-        <div class="flex flex-wrap w-full self-center justify-center">
-          <router-link :to="{ name: 'CharacterDetails', params: { id: character.id } }"
-                      v-for="character in characters" 
-                      :key="character.id"
-                      class="m-2 p-2">
-                      <img :src="character.image" class="py-2 mx-auto flex justify-center w-20 rounded-full popout" />
-                      <span class="py-2 px-4 text-neutral-500 dark:text-neutral-200 tracking-wide">{{ character.name }}</span>
-                  </router-link>
+        <div class="flex flex-wrap self-center justify-center text-center">
+          <div class="p-2 w-1/2 md:w-32"
+               v-for="character in characters" :key="character.id">
+            <router-link :to="{ name: 'CharacterDetails', params: { id: character.id } }">
+              <img :src="character.image" class="py-2 mx-auto flex justify-center w-20 rounded-full popout" />
+              <span class="py-2 text-neutral-500 dark:text-neutral-200 tracking-wide break-normal">{{ character.name }}</span>
+            </router-link>
+          </div>
         </div>
         <div class="pl-5 pt-3 flex justify-center items-center flex-col">
           <span>Total de {{ characterCount }} resultados.</span>

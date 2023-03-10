@@ -6,7 +6,7 @@
       <div class="md:shrink-0">
         <img class="h-96 w-full object-cover md:h-full md:w-96" :src="character.image" :alt="character.name">
       </div>
-      <div class="px-6 py-4">
+      <div class="py-4 md:py-0 md:px-6">
         <div class="font-bold text-xl mb-2 text-sky-500">{{ character.name }}</div>
         <div class="grid grid-cols-2 gap-3 pb-5">
           <span class="font-bold">Status:</span>
@@ -25,8 +25,8 @@
           <span>{{ character.location.name }}</span>
         </div>
         
-        <span class="font-bold pt-4">Episódios em que aparece:</span>
-        <div class="flex flex-wrap px-3 pt-4 pb-2">
+        <p class="font-bold py-3">Episódios em que aparece:</p>
+        <div class="flex flex-wrap justify-evenly md:justify-start">
           <div v-for="(episode, k) in character.episode" :key="k"
                class="inline-block bg-gray-200 rounded-full px-2 py-1 my-1 text-sm font-semibold text-gray-700 mr-2">
             {{ getLastNumber(episode) }}
