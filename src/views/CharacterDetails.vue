@@ -1,6 +1,7 @@
 <template>
   <PageWrapper title="Informações do personagem">
     <router-link :to="{ name: 'Home'}">← Voltar</router-link>
+    <router-link :to="{ name: 'Home', params: { page: props.page } }">← Voltar2</router-link>
 
     <div class="flex rounded justify-center min-w-md md:min-w-2xl mx-auto overflow-hidden py-3 flex-col md:flex-row " v-if="!loading">
       <div class="md:shrink-0">
@@ -46,6 +47,14 @@ const props = defineProps({
   id: {
     type: String,
     default: '',
+  },
+  busca: {
+    type: String,
+    default: '',
+  },
+  page: {
+    type: Number,
+    default: 1,
   },
 })
 const character = ref({})

@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import routes from '@/router/routes'
-// import { sidebarState } from '@/composables'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,9 +12,6 @@ router.beforeEach(() => {
 })
 
 router.afterEach(() => {
-  // if (window.innerWidth <= 1024) {
-  //   sidebarState.isOpen = false
-  // }
   NProgress.done()
 })
 
